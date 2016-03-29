@@ -3031,3 +3031,20 @@
         }
 
   }
+
+
+.members .member {
+  padding-bottom: 20px;
+}
+
+.members .member h3 span {
+  font-size: 13px;
+}
+
+.members .member .image {
+  width: 200px;
+  height: 200px;
+  -webkit-border-radius: 50%;
+     -moz-border-radius: 50%;
+          border-radius: 50%;
+}
