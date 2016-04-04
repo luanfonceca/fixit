@@ -153,66 +153,66 @@
 
         });
 
-    // Main sections.
-      $('.main').each(function() {
+    // // Main sections.
+    //   $('.main').each(function() {
 
-        var $this = $(this),
-          $primaryImg = $this.find('.image.primary > img'),
-          $bg,
-          options;
+    //     var $this = $(this),
+    //       $primaryImg = $this.find('.image.primary > img'),
+    //       $bg,
+    //       options;
 
-        // No primary image? Bail.
-          if ($primaryImg.length == 0)
-            return;
+    //     // No primary image? Bail.
+    //       if ($primaryImg.length == 0)
+    //         return;
 
-        // Hack: IE8 fallback.
-          if (skel.vars.IEVersion < 9) {
+    //     // Hack: IE8 fallback.
+    //       if (skel.vars.IEVersion < 9) {
 
-            $this
-              .css('background-image', 'url("' + $primaryImg.attr('src') + '")')
-              .css('-ms-behavior', 'url("css/ie/backgroundsize.min.htc")');
+    //         $this
+    //           .css('background-image', 'url("' + $primaryImg.attr('src') + '")')
+    //           .css('-ms-behavior', 'url("css/ie/backgroundsize.min.htc")');
 
-            return;
+    //         return;
 
-          }
+    //       }
 
-        // Create bg and append it to body.
-          $bg = $('<div class="main-bg" id="' + $this.attr('id') + '-bg"></div>')
-            .css('background-image', (
-              'url("assets/css/images/overlay.png"), url("' + $primaryImg.attr('src') + '")'
-            ))
-            .appendTo($body);
+    //     // Create bg and append it to body.
+    //       $bg = $('<div class="main-bg" id="' + $this.attr('id') + '-bg"></div>')
+    //         .css('background-image', (
+    //           'url("assets/css/images/overlay.png"), url("' + $primaryImg.attr('src') + '")'
+    //         ))
+    //         .appendTo($body);
 
-        // Scrollex.
-          options = {
-            mode: 'middle',
-            delay: 200,
-            top: '-10vh',
-            bottom: '-10vh'
-          };
+    //     // Scrollex.
+    //       options = {
+    //         mode: 'middle',
+    //         delay: 200,
+    //         top: '-10vh',
+    //         bottom: '-10vh'
+    //       };
 
-          if (skel.canUse('transition')) {
+    //       if (skel.canUse('transition')) {
 
-            options.init = function() { $bg.removeClass('active'); };
-            options.enter = function() { $bg.addClass('active'); };
-            options.leave = function() { $bg.removeClass('active'); };
+    //         options.init = function() { $bg.removeClass('active'); };
+    //         options.enter = function() { $bg.addClass('active'); };
+    //         options.leave = function() { $bg.removeClass('active'); };
 
-          }
-          else {
+    //       }
+    //       else {
 
-            $bg
-              .css('opacity', 1)
-              .hide();
+    //         $bg
+    //           .css('opacity', 1)
+    //           .hide();
 
-            options.init = function() { $bg.fadeOut(0); };
-            options.enter = function() { $bg.fadeIn(400); };
-            options.leave = function() { $bg.fadeOut(400); };
+    //         options.init = function() { $bg.fadeOut(0); };
+    //         options.enter = function() { $bg.fadeIn(400); };
+    //         options.leave = function() { $bg.fadeOut(400); };
 
-          }
+    //       }
 
-          $this.scrollex(options);
+    //       $this.scrollex(options);
 
-      });
+    //   });
 
   });
 
