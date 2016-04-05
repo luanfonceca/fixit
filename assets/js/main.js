@@ -223,10 +223,10 @@
         data: $(this).serialize(),
         dataType: 'json',
         success: function(data) {
-          alert('Mensagem enviada com sucesso.')
+          $.simplyToast('Mensagem enviada!', 'success');
         },
         error: function(err) {
-          alert('Erro ao enviar mensagem.')
+          $.simplyToast('Erro ao enviar mensagem!', 'danger');
         }
       });
     });

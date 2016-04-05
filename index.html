@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="assets/css/simply-toast.min.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
     <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
@@ -136,13 +137,18 @@
           <!--<form action="http://formspree.io/luanfonceca@gmail.com" method="POST">-->
           <form id="contact-form" method="POST" action="javascript:;">
             <div class="row uniform">
-              <div class="6u 12u$(xsmall)"><input type="text" name="name" id="name" placeholder="Nome" /></div>
-              <div class="6u$ 12u$(xsmall)"><input type="email" name="_replyto" id="_replyto" placeholder="Email" /></div>
-              <div class="12u$"><textarea name="message" id="message" placeholder="Mensagem" rows="4"></textarea></div>
+              <div class="6u 12u$(xsmall)">
+                <input type="text" name="name" id="name" placeholder="Nome" required="required" />
+              </div>
+              <div class="6u$ 12u$(xsmall)">
+                <input type="email" name="_replyto" id="_replyto" placeholder="Email" required="required" />
+              </div>
+              <div class="12u$">
+                <textarea name="message" id="message" placeholder="Mensagem" rows="4" required="required"></textarea>
+              </div>
               <div class="12u$">
                 <ul class="actions">
                   <input type="text" name="_gotcha" style="display:none" />
-                  <input type="text" name="_format" value="plain" style="display:none" />
                   <input type="hidden" name="_subject" value="Contato através do Site" />
                   <input type="hidden" name="_next" value="//site.io/thanks.html" />
                   <li><input type="submit" value="Enviar Mensagem" class="special" /></li>
@@ -171,6 +177,7 @@
       <script src="assets/js/jquery.scrolly.min.js"></script>
       <script src="assets/js/skel.min.js"></script>
       <script src="assets/js/util.js"></script>
+      <script src="assets/js/simply-toast.min.js"></script>
       <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
       <script src="assets/js/main.js"></script>
 
