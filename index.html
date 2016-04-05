@@ -133,13 +133,15 @@
           <header class="major">
             <h2>Entre em contato</h2>
           </header>
-          <form method="post" action="#">
+          <!--<form id="contact-form" method="post" action="javascript:;">-->
+          <form action="http://formspree.io/luanfoncec@gmail.com" method="POST">
             <div class="row uniform">
               <div class="6u 12u$(xsmall)"><input type="text" name="name" id="name" placeholder="Nome" /></div>
-              <div class="6u$ 12u$(xsmall)"><input type="email" name="email" id="email" placeholder="Email" /></div>
+              <div class="6u$ 12u$(xsmall)"><input type="email" name="_replyto" id="_replyto" placeholder="Email" /></div>
               <div class="12u$"><textarea name="message" id="message" placeholder="Mensagem" rows="4"></textarea></div>
               <div class="12u$">
                 <ul class="actions">
+                  <input type="hidden" name="_subject" value="Contato através do Site" />
                   <li><input type="submit" value="Enviar Mensagem" class="special" /></li>
                 </ul>
               </div>
